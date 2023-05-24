@@ -1,0 +1,16 @@
+.id {
+    font-weight: 700;
+    color: blue;
+}
+
+.name {
+    color: darkblue;
+}
+
+.mail {
+    font-size: 1.5rem;
+}
+
+.text {
+    font-style: italic;
+}
