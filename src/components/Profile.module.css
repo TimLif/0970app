@@ -3,8 +3,17 @@
     color: blue;
 }
 
+.id span {
+    color: crimson;
+}
+
 .name {
+    font-weight: 700;
     color: darkblue;
+}
+
+.name span {
+    color: crimson;
 }
 
 .mail {

@@ -1,25 +1,12 @@
 import { NavLink, Route, Routes } from "react-router-dom";
-import "./App.css";
+// import "./App.css";
+import { Profile } from "./components/Profile";
+import { Messages } from "./components/Messages";
+import { Settings } from "./components/Settings";
+import { Shop } from "./components/Shop";
 
-
-const Profile = () => {
-  return (
-    <h1>Это страница с профилем</h1>
-  );
-}
-const Messages = () => {
-  return <h1>Это страница с сообщениями</h1>;
-};
-const Settings = () => {
-  return <h1>Это страница с настройками</h1>;
-};
-const Shop = () => {
-  return (
-    <h1>Магазин</h1>
-  );
-};
-
-function App() {
+function App(props) {
+  console.log(props);
   return (
     <div className="container mt-5">
       <div className="row mt-3">
@@ -41,8 +28,8 @@ function App() {
         </div>
         <div className="col-md-9">
           <Routes>
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/messages" element={<Messages />} />
+            <Route path="/profile/*" element={<Profile function={props.function.key_getUser} />} />
+            <Route path="/messages" element={<Messages function={props.function.key_getUsers} />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/shop" element={<Shop />} />
           </Routes>
